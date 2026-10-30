@@ -1,0 +1,28 @@
+/* ==========================================================================
+   Textora - Print styles
+   ========================================================================== */
+
+@media print {
+  .site-header,
+  .site-footer,
+  .menu-toggle,
+  .editor-toolbar,
+  .hero-actions,
+  [data-ad-slot],
+  .no-print {
+    display: none !important;
+  }
+  body {
+    font-size: 11pt;
+    color: #000;
+    background: #fff;
+  }
+  a { color: #000; text-decoration: underline; }
+  .container { max-width: 100%; padding: 0; }
+  .tool-card, .editor-panel, .stats-panel, .blog-card {
+    box-shadow: none;
+    border: 1px solid #ccc;
+  }
+  .text-input { min-height: auto; }
+  h1, h2, h3 { page-break-after: avoid; }
+}
