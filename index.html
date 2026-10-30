@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Textora - Free Online Word Counter and Text Tools</title>
+  <meta name="description" content="Count words, characters, sentences and paragraphs instantly. Analyze keyword density, estimate reading time, and use free text formatting tools in your browser.">
+  <link rel="canonical" href="https://YOURDOMAIN.com/">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Textora - Free Online Word Counter and Text Tools">
+  <meta property="og:description" content="Count words and characters, analyze text, estimate reading time, and format text directly in your browser.">
+  <meta property="og:url" content="https://YOURDOMAIN.com/">
+  <meta property="og:site_name" content="Textora">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Textora",
+    "url": "https://YOURDOMAIN.com/",
+    "description": "Free online word counter and text tools that run in your browser.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://YOURDOMAIN.com/?s={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Textora - Free Online Word Counter and Text Tools",
+    "url": "https://YOURDOMAIN.com/",
+    "isPartOf": { "@type": "WebSite", "name": "Textora", "url": "https://YOURDOMAIN.com/" }
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ===== Header ===== -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Textora home">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span data-brand>Textora</span>
+      </a>
+      <button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <nav class="primary-nav" id="primary-nav" data-primary-nav aria-label="Primary">
+        <ul>
+          <li><a href="index.html" aria-current="page">Home</a></li>
+          <li><a href="tools/word-counter.html">Word Counter</a></li>
+          <li><a href="tools/character-counter.html">Character Counter</a></li>
+          <li class="nav-dropdown">
+            <button type="button" data-dropdown-toggle aria-expanded="false" aria-haspopup="true">Text Tools ▾</button>
+            <div class="nav-dropdown-menu">
+              <ul>
+                <li><a href="tools/sentence-counter.html">Sentence Counter</a></li>
+                <li><a href="tools/paragraph-counter.html">Paragraph Counter</a></li>
+                <li><a href="tools/reading-time-calculator.html">Reading Time Calculator</a></li>
+                <li><a href="tools/speaking-time-calculator.html">Speaking Time Calculator</a></li>
+                <li><a href="tools/keyword-density-checker.html">Keyword Density Checker</a></li>
+                <li><a href="tools/word-frequency-counter.html">Word Frequency Counter</a></li>
+                <li><a href="tools/text-case-converter.html">Text Case Converter</a></li>
+                <li><a href="tools/remove-extra-spaces.html">Remove Extra Spaces</a></li>
+                <li><a href="tools/remove-duplicate-lines.html">Remove Duplicate Lines</a></li>
+                <li><a href="tools/find-and-replace.html">Find and Replace Text</a></li>
+                <li><a href="tools/text-sorter.html">Text Sorter</a></li>
+                <li><a href="tools/reverse-text.html">Reverse Text</a></li>
+                <li><a href="tools/remove-line-breaks.html">Remove Line Breaks</a></li>
+                <li><a href="tools/text-comparison.html">Text Comparison Tool</a></li>
+                <li><a href="tools/lorem-ipsum-generator.html">Lorem Ipsum Generator</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="blog/index.html">Blog</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== Hero ===== -->
+    <section class="hero">
+      <div class="container">
+        <h1>Free Online Word Counter and Text Tools</h1>
+        <p class="lead">Count words and characters, analyze text, estimate reading and speaking time, and format text directly in your browser — no sign-up required.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="tools/word-counter.html">Open Word Counter</a>
+          <a class="btn btn-secondary" href="#tools">Explore All Tools</a>
+        </div>
+        <p class="privacy-note">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+          <span>Most text processing on this site runs locally in your browser. Text you paste into the editor is not uploaded to a server by this site. See our <a href="privacy-policy.html">Privacy Policy</a> for details about hosting, analytics and future advertising.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== Main word counter editor ===== -->
+    <section class="section" id="word-counter">
+      <div class="container">
+        <div class="section-head">
+          <h2>Live Word Counter</h2>
+          <p>Paste or type your text below. Every statistic updates instantly as you type.</p>
+        </div>
+
+        <div class="editor-layout" data-word-counter>
+          <!-- Editor -->
+          <div class="editor-panel">
+            <div class="editor-toolbar">
+              <button class="btn btn-ghost btn-sm" type="button" data-paste>Paste</button>
+              <button class="btn btn-ghost btn-sm" type="button" data-copy>Copy</button>
+              <button class="btn btn-ghost btn-sm" type="button" data-download>Download .txt</button>
+              <button class="btn btn-ghost btn-sm" type="button" data-clear>Clear</button>
+            </div>
+            <label for="main-text" class="sr-only">Your text</label>
+            <textarea id="main-text" class="text-input" data-text-input placeholder="Type or paste your text here..." spellcheck="true" rows="14"></textarea>
+            <p class="form-message" data-editor-message aria-live="polite"></p>
+            <p class="form-hint">Press Ctrl/Cmd + V to paste text. Word and character counts update live.</p>
+          </div>
+
+          <!-- Stats -->
+          <aside class="stats-panel" aria-label="Text statistics">
+            <h3 class="mt-0">Statistics</h3>
+            <div class="stats-grid">
+              <div class="stat-card"><span class="stat-label">Words</span><span class="stat-value" data-stat-words>0</span></div>
+              <div class="stat-card"><span class="stat-label">Characters</span><span class="stat-value" data-stat-chars>0</span></div>
+              <div class="stat-card"><span class="stat-label">Chars (no spaces)</span><span class="stat-value" data-stat-chars-no-spaces>0</span></div>
+              <div class="stat-card"><span class="stat-label">Sentences</span><span class="stat-value" data-stat-sentences>0</span></div>
+              <div class="stat-card"><span class="stat-label">Paragraphs</span><span class="stat-value" data-stat-paragraphs>0</span></div>
+              <div class="stat-card"><span class="stat-label">Unique words</span><span class="stat-value" data-stat-unique>0</span></div>
+              <div class="stat-card"><span class="stat-label">Avg word length</span><span class="stat-value" data-stat-avg-length>0.0</span></div>
+              <div class="stat-card"><span class="stat-label">Reading time</span><span class="stat-value" data-stat-reading>0 min</span></div>
+              <div class="stat-card"><span class="stat-label">Speaking time</span><span class="stat-value" data-stat-speaking>0 min</span></div>
+            </div>
+
+            <div class="goal-box">
+              <label for="goal-input" class="stat-label">Word count goal (optional)</label>
+              <input type="number" id="goal-input" class="text-input" style="min-height:auto;padding:8px 10px;" min="0" step="1" placeholder="e.g. 500" data-goal-input>
+              <div class="goal-bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                <span data-goal-progress></span>
+              </div>
+              <p class="form-hint" data-goal-status aria-live="polite"></p>
+            </div>
+          </aside>
+        </div>
+
+        <div class="callout mt-3">
+          <p><strong>How counts work:</strong> Words are separated by whitespace. Punctuation attached to a word is not counted as a separate word. Sentences end with <code>.</code> <code>!</code> or <code>?</code>. Paragraphs are separated by blank lines. Reading and speaking times assume 238 and 150 words per minute respectively and are estimates, not guarantees.</p>
+        </div>
+
+        <!-- Ad slot (hidden/dev placeholder until approved) -->
+        <div data-ad-slot="home-mid" aria-label="Advertisement space"></div>
+      </div>
+    </section>
+
+    <!-- ===== Keyword analysis ===== -->
+    <section class="section section--alt" id="keyword-analysis">
+      <div class="container">
+        <div class="section-head">
+          <h2>Keyword Analysis</h2>
+          <p>See which words appear most often in your text. Density is a descriptive metric — it does not guarantee SEO results.</p>
+        </div>
+        <div data-keyword-density>
+          <div class="editor-layout">
+            <div class="editor-panel">
+              <label for="kw-text" class="sr-only">Text for keyword analysis</label>
+              <textarea id="kw-text" class="text-input" data-text-input rows="10" placeholder="Paste text to analyze keyword frequency..."></textarea>
+              <div class="check-row mt-1">
+                <input type="checkbox" id="exclude-stop" data-exclude-stop>
+                <label for="exclude-stop">Exclude common stop words (the, and, of, etc.)</label>
+              </div>
+            </div>
+            <aside class="stats-panel">
+              <h3 class="mt-0">Top words</h3>
+              <p class="form-hint">Total words analyzed: <strong data-keyword-total>0</strong></p>
+              <p class="muted" data-keyword-empty>Enter text to see the most frequent words.</p>
+              <div data-keyword-results></div>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Tools directory ===== -->
+    <section class="section" id="tools">
+      <div class="container">
+        <div class="section-head">
+          <h2>All Text Tools</h2>
+          <p>Twenty focused tools for counting, analyzing, and formatting text.</p>
+        </div>
+        <div class="tool-grid">
+          <a class="tool-card" href="tools/word-counter.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 7V4h16v3M9 20h6M12 4v16"/></svg>
+            </span>
+            <h3>Word Counter</h3>
+            <p>Count words, characters, sentences and paragraphs with live statistics.</p>
+          </a>
+          <a class="tool-card" href="tools/character-counter.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            </span>
+            <h3>Character Counter</h3>
+            <p>Measure characters with and without spaces for social posts and limits.</p>
+          </a>
+          <a class="tool-card" href="tools/sentence-counter.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M8 12h8"/></svg>
+            </span>
+            <h3>Sentence Counter</h3>
+            <p>Count sentences and review sentence structure at a glance.</p>
+          </a>
+          <a class="tool-card" href="tools/paragraph-counter.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </span>
+            <h3>Paragraph Counter</h3>
+            <p>Count paragraphs and check document structure quickly.</p>
+          </a>
+          <a class="tool-card" href="tools/reading-time-calculator.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+            </span>
+            <h3>Reading Time Calculator</h3>
+            <p>Estimate how long a piece of text takes to read, with adjustable WPM.</p>
+          </a>
+          <a class="tool-card" href="tools/speaking-time-calculator.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v10"/><path d="M8 7v4a4 4 0 0 0 8 0V7"/><path d="M5 21h14"/></svg>
+            </span>
+            <h3>Speaking Time Calculator</h3>
+            <p>Estimate presentation length based on your speaking pace.</p>
+          </a>
+          <a class="tool-card" href="tools/keyword-density-checker.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V10M10 20V4M16 20v-8M22 20v-4"/></svg>
+            </span>
+            <h3>Keyword Density Checker</h3>
+            <p>See term frequency and percentage against total words.</p>
+          </a>
+          <a class="tool-card" href="tools/text-case-converter.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18l5-12 5 12M6 14h6M16 18l3-8 3 8M17 15h4"/></svg>
+            </span>
+            <h3>Text Case Converter</h3>
+            <p>Convert to uppercase, lowercase, title case or sentence case.</p>
+          </a>
+          <a class="tool-card" href="tools/uppercase-converter.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18l5-12 5 12M6 14h6"/></svg>
+            </span>
+            <h3>Uppercase Converter</h3>
+            <p>Turn any text into capital letters instantly.</p>
+          </a>
+          <a class="tool-card" href="tools/lowercase-converter.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 18l4-10 4 10M6 14h4M14 18v-8h4a2 2 0 0 1 0 4h-4"/></svg>
+            </span>
+            <h3>Lowercase Converter</h3>
+            <p>Convert text to lowercase without changing punctuation.</p>
+          </a>
+          <a class="tool-card" href="tools/title-case-converter.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h10M4 18h16"/></svg>
+            </span>
+            <h3>Title Case Converter</h3>
+            <p>Capitalize the first letter of each word for headings and titles.</p>
+          </a>
+          <a class="tool-card" href="tools/remove-extra-spaces.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8h18M3 16h18"/></svg>
+            </span>
+            <h3>Remove Extra Spaces</h3>
+            <p>Clean up double spaces and messy whitespace in pasted text.</p>
+          </a>
+          <a class="tool-card" href="tools/remove-duplicate-lines.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="6" rx="1"/><rect x="4" y="14" width="16" height="6" rx="1"/></svg>
+            </span>
+            <h3>Remove Duplicate Lines</h3>
+            <p>Keep only the first occurrence of each line in a list.</p>
+          </a>
+          <a class="tool-card" href="tools/find-and-replace.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="10" cy="10" r="6"/><path d="M15 15l5 5"/></svg>
+            </span>
+            <h3>Find and Replace Text</h3>
+            <p>Replace words or patterns with optional case matching and regex.</p>
+          </a>
+          <a class="tool-card" href="tools/text-sorter.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h10M4 12h7M4 18h4M16 4v16M16 20l3-3M16 20l-3-3"/></svg>
+            </span>
+            <h3>Text Sorter</h3>
+            <p>Sort lines alphabetically, numerically, by length or in reverse.</p>
+          </a>
+          <a class="tool-card" href="tools/reverse-text.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 12h18M7 8l-4 4 4 4M17 8l4 4-4 4"/></svg>
+            </span>
+            <h3>Reverse Text</h3>
+            <p>Reverse characters, words or line order in one click.</p>
+          </a>
+          <a class="tool-card" href="tools/remove-line-breaks.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+            </span>
+            <h3>Remove Line Breaks</h3>
+            <p>Turn multi-line text into a single continuous paragraph.</p>
+          </a>
+          <a class="tool-card" href="tools/word-frequency-counter.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 20V8M10 20V4M16 20v-6M22 20v-10"/></svg>
+            </span>
+            <h3>Word Frequency Counter</h3>
+            <p>Count how often each word appears in a document.</p>
+          </a>
+          <a class="tool-card" href="tools/text-comparison.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 3v18M16 3v18M3 8h18M3 16h18"/></svg>
+            </span>
+            <h3>Text Comparison Tool</h3>
+            <p>Compare two versions and highlight added and removed lines.</p>
+          </a>
+          <a class="tool-card" href="tools/lorem-ipsum-generator.html">
+            <span class="tool-icon" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h10"/></svg>
+            </span>
+            <h3>Lorem Ipsum Generator</h3>
+            <p>Generate placeholder paragraphs, sentences or words for layouts.</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== How to use ===== -->
+    <section class="section section--alt" id="how-to-use">
+      <div class="container">
+        <div class="section-head">
+          <h2>How to Use the Word Counter</h2>
+          <p>A quick walkthrough of the main workflow.</p>
+        </div>
+        <div class="prose">
+          <ol>
+            <li><strong>Enter or paste text.</strong> Use the editor at the top of this page or open the dedicated <a href="tools/word-counter.html">Word Counter</a> page.</li>
+            <li><strong>Review the live counts.</strong> Words, characters, sentences, paragraphs and unique words update as you type.</li>
+            <li><strong>Explore detailed statistics.</strong> Reading and speaking times appear in the statistics panel; the dedicated <a href="tools/reading-time-calculator.html">Reading Time Calculator</a> lets you adjust words per minute.</li>
+            <li><strong>Analyze keyword frequency.</strong> Use the keyword panel to see the most common terms and their share of total words.</li>
+            <li><strong>Format or clean the text.</strong> Related tools can <a href="tools/remove-extra-spaces.html">remove extra spaces</a>, <a href="tools/remove-line-breaks.html">remove line breaks</a>, or <a href="tools/text-case-converter.html">change case</a>.</li>
+            <li><strong>Copy or download the result.</strong> Every tool provides a copy button and most offer a downloadable <code>.txt</code> file.</li>
+          </ol>
+          <p>Statistics are intended to support editing decisions. They are mechanical counts and estimates — not a substitute for human review, and not a guarantee that a text meets a specific publication guideline.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Who can benefit ===== -->
+    <section class="section" id="who-benefits">
+      <div class="container">
+        <div class="section-head">
+          <h2>Who Can Benefit from These Tools?</h2>
+        </div>
+        <div class="prose">
+          <h3>Students and academic writers</h3>
+          <p>Check essay word limits, spot overly long paragraphs, and review keyword repetition before submitting an assignment.</p>
+          <h3>Teachers and researchers</h3>
+          <p>Measure reading load for handouts, prepare lesson text, and inspect term frequency in longer documents.</p>
+          <h3>Bloggers and content creators</h3>
+          <p>Estimate reading time for posts, keep headings and paragraphs tidy, and review keyword density as one small signal among many.</p>
+          <h3>SEO professionals</h3>
+          <p>Use keyword frequency as a descriptive check, not a ranking promise. Compare drafts and clean copied text before publishing.</p>
+          <h3>Editors and proofreaders</h3>
+          <p>Remove duplicate lines from lists, standardize casing, and compare revisions side by side.</p>
+          <h3>Business and marketing professionals</h3>
+          <p>Fit copy into character limits, prepare concise presentation scripts, and generate placeholder text for mockups.</p>
+          <h3>Social media users</h3>
+          <p>Measure character counts for posts, shorten long pasted text, and remove unwanted line breaks.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Detailed tool explanations ===== -->
+    <section class="section section--alt" id="tool-explanations">
+      <div class="container">
+        <div class="section-head">
+          <h2>Detailed Tool Explanations</h2>
+          <p>A short overview of the main tools and when to use them.</p>
+        </div>
+        <div class="prose">
+          <h3><a href="tools/word-counter.html">Word Counter</a></h3>
+          <p>Counts words separated by whitespace. Useful for essays, articles and anything with a word limit. See <a href="blog/word-count-vs-character-count.html">Word Count vs Character Count</a> for the difference.</p>
+
+          <h3><a href="tools/character-counter.html">Character Counter</a></h3>
+          <p>Measures characters with and without spaces. Essential for meta descriptions, social posts and SMS-style limits.</p>
+
+          <h3><a href="tools/sentence-counter.html">Sentence Counter</a></h3>
+          <p>Counts sentences based on ending punctuation. Helpful for readability checks and short-copy editing.</p>
+
+          <h3><a href="tools/paragraph-counter.html">Paragraph Counter</a></h3>
+          <p>Counts blocks of text separated by blank lines. Useful for structure review before publishing.</p>
+
+          <h3><a href="tools/reading-time-calculator.html">Reading Time Calculator</a></h3>
+          <p>Estimates reading time from a configurable words-per-minute rate. Learn more in <a href="blog/how-to-calculate-reading-time.html">How to Calculate Reading Time</a>.</p>
+
+          <h3><a href="tools/speaking-time-calculator.html">Speaking Time Calculator</a></h3>
+          <p>Estimates presentation length. Speaking pace varies widely, so treat the result as a starting point. See <a href="blog/how-to-estimate-speaking-time.html">How to Estimate Speaking Time</a>.</p>
+
+          <h3><a href="tools/keyword-density-checker.html">Keyword Density Checker</a></h3>
+          <p>Shows the most frequent words and their percentage of total words. Density is descriptive, not a ranking guarantee. See <a href="blog/how-to-check-keyword-density.html">How to Check Keyword Density</a>.</p>
+
+          <h3><a href="tools/text-case-converter.html">Text Case Converter</a></h3>
+          <p>Switches between uppercase, lowercase, title case and sentence case. Handy for headings and brand names.</p>
+
+          <h3><a href="tools/remove-extra-spaces.html">Remove Extra Spaces</a></h3>
+          <p>Collapses repeated spaces and stray whitespace, often copied from web pages or PDFs.</p>
+
+          <h3><a href="tools/find-and-replace.html">Find and Replace Text</a></h3>
+          <p>Replaces text using plain matching or a regular expression. Optional case matching prevents accidental replacements.</p>
+
+          <h3><a href="tools/text-comparison.html">Text Comparison Tool</a></h3>
+          <p>Highlights added and removed lines between two versions. Useful for reviewing edits before publication.</p>
+
+          <h3><a href="tools/lorem-ipsum-generator.html">Lorem Ipsum Generator</a></h3>
+          <p>Produces placeholder text for layouts. Lorem Ipsum has no meaning and should never be published as real copy.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Educational content ===== -->
+    <section class="section" id="education">
+      <div class="container">
+        <div class="section-head">
+          <h2>Writing and Text Guidance</h2>
+        </div>
+        <div class="prose">
+          <h3>Word count versus character count</h3>
+          <p>Word count measures whole tokens separated by whitespace, while character count measures individual code units including spaces and punctuation. Different systems may treat hyphenated words, contractions or emoji differently.</p>
+          <h3>How reading time is estimated</h3>
+          <p>Reading time is estimated by dividing the word count by an assumed words-per-minute rate. We default to 238 WPM. Real reading speed depends on text complexity, reader familiarity and device.</p>
+          <h3>What keyword density means</h3>
+          <p>Keyword density is the number of occurrences of a term divided by the total word count. It is a descriptive metric. Search engines evaluate usefulness and relevance with many signals, and no specific density guarantees a ranking.</p>
+          <h3>Why text formatting matters</h3>
+          <p>Clean whitespace, consistent casing and clear paragraph breaks make text easier to read. Formatting tools help you prepare drafts before they go into a CMS or document editor.</p>
+          <h3>Preparing text for assignments and articles</h3>
+          <p>Check word limits early, review paragraph length, and read the document aloud to catch awkward phrasing. The tools on this site support those checks; they do not replace careful editing.</p>
+          <h3>Cleaning copied text</h3>
+          <p>Text copied from browsers or PDFs often contains extra spaces, broken line breaks or repeated lines. Use the <a href="tools/remove-extra-spaces.html">spaces tool</a> and <a href="tools/remove-line-breaks.html">line break tool</a> to tidy it up.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section--alt" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <h2>Frequently Asked Questions</h2>
+        </div>
+        <div class="faq">
+          <details>
+            <summary>How is a word counted?</summary>
+            <p>The counter splits your text on whitespace. Any sequence of characters separated by spaces, tabs or line breaks counts as one word. Punctuation attached to a word (for example “hello!”) does not create a separate word. This is a mechanical rule and may not match every language's tokenization.</p>
+          </details>
+          <details>
+            <summary>Are spaces included in character counts?</summary>
+            <p>We show both numbers: characters including spaces, and characters excluding spaces. The second value removes all whitespace characters before counting.</p>
+          </details>
+          <details>
+            <summary>Does the word counter work offline?</summary>
+            <p>Yes. After the page has loaded once, all counting and text processing happens in your browser with JavaScript. No network requests are required for the counting features.</p>
+          </details>
+          <details>
+            <summary>Is my text uploaded to a server?</summary>
+            <p>The counting, formatting and analysis features on this site run locally in your browser. This site does not send the text you type to a server. Hosting providers may still process standard technical logs. See the <a href="privacy-policy.html">Privacy Policy</a> for details.</p>
+          </details>
+          <details>
+            <summary>How is reading time estimated?</summary>
+            <p>Word count is divided by an assumed rate of 238 words per minute. You can change that rate on the <a href="tools/reading-time-calculator.html">Reading Time Calculator</a>. Actual reading speed depends on the reader and the material.</p>
+          </details>
+          <details>
+            <summary>Can I download my text?</summary>
+            <p>Yes. The main editor and most tools provide a “Download .txt” button that saves your text as a plain text file.</p>
+          </details>
+          <details>
+            <summary>Does the tool support long documents?</summary>
+            <p>Browser text areas can handle long documents, but very large texts may slow down live statistics in older devices. For extremely long documents, consider splitting the text into sections.</p>
+          </details>
+          <details>
+            <summary>Can I use these tools on a mobile phone?</summary>
+            <p>Yes. All pages are responsive. The mobile menu, editor and tool controls are designed for small screens and touch input.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Text Tools</h3>
+          <ul>
+            <li><a href="tools/word-counter.html">Word Counter</a></li>
+            <li><a href="tools/character-counter.html">Character Counter</a></li>
+            <li><a href="tools/sentence-counter.html">Sentence Counter</a></li>
+            <li><a href="tools/paragraph-counter.html">Paragraph Counter</a></li>
+            <li><a href="tools/reading-time-calculator.html">Reading Time</a></li>
+            <li><a href="tools/speaking-time-calculator.html">Speaking Time</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>More Tools</h3>
+          <ul>
+            <li><a href="tools/keyword-density-checker.html">Keyword Density</a></li>
+            <li><a href="tools/text-case-converter.html">Case Converter</a></li>
+            <li><a href="tools/remove-extra-spaces.html">Remove Spaces</a></li>
+            <li><a href="tools/remove-duplicate-lines.html">Remove Duplicates</a></li>
+            <li><a href="tools/text-comparison.html">Compare Text</a></li>
+            <li><a href="tools/lorem-ipsum-generator.html">Lorem Ipsum</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Blog</h3>
+          <ul>
+            <li><a href="blog/index.html">All Articles</a></li>
+            <li><a href="blog/how-to-count-words-in-an-essay.html">Count Essay Words</a></li>
+            <li><a href="blog/word-count-vs-character-count.html">Words vs Characters</a></li>
+            <li><a href="blog/how-to-calculate-reading-time.html">Reading Time</a></li>
+            <li><a href="blog/how-to-check-keyword-density.html">Keyword Density</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Site</h3>
+          <ul>
+            <li><a href="about.html">About</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="terms.html">Terms of Use</a></li>
+            <li><a href="disclaimer.html">Disclaimer</a></li>
+            <li><a href="cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="accessibility.html">Accessibility</a></li>
+            <li><a href="editorial-policy.html">Editorial Policy</a></li>
+            <li><a href="sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">© <span data-current-year>2025</span> <span data-brand>Textora</span>. All rights reserved.</p>
+        <p class="mb-0">Contact: <a href="mailto:contact@YOURDOMAIN.com" data-contact-email>contact@YOURDOMAIN.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/ads.js"></script>
+  <script src="js/word-counter.js"></script>
+  <script src="js/keyword-density.js"></script>
+</body>
+</html>
