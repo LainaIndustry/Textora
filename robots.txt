@@ -1,0 +1,8 @@
+# Textora robots.txt
+User-agent: *
+Allow: /
+Disallow:
+
+# No sitemap URL is listed here until the production domain is known.
+# After deployment, add the full sitemap URL, for example:
+# Sitemap: https://YOURDOMAIN.com/sitemap.xml
