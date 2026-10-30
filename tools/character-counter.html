@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Character Counter - Count Characters With and Without Spaces | Textora</title>
+  <meta name="description" content="Count characters with and without spaces instantly. Check tweet limits, meta descriptions and other character restrictions in your browser.">
+  <link rel="canonical" href="https://YOURDOMAIN.com/tools/character-counter.html">
+  <meta name="robots" content="index, follow">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Character Counter | Textora">
+  <meta property="og:description" content="Count characters with and without spaces instantly.">
+  <meta property="og:url" content="https://YOURDOMAIN.com/tools/character-counter.html">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/print.css" media="print">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {"@type": "ListItem","position": 1,"name": "Home","item": "https://YOURDOMAIN.com/"},
+      {"@type": "ListItem","position": 2,"name": "Tools","item": "https://YOURDOMAIN.com/#tools"},
+      {"@type": "ListItem","position": 3,"name": "Character Counter","item": "https://YOURDOMAIN.com/tools/character-counter.html"}
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html" aria-label="Textora home">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span data-brand>Textora</span>
+      </a>
+      <button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <nav class="primary-nav" id="primary-nav" data-primary-nav aria-label="Primary">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="word-counter.html">Word Counter</a></li>
+          <li><a href="character-counter.html" aria-current="page">Character Counter</a></li>
+          <li class="nav-dropdown">
+            <button type="button" data-dropdown-toggle aria-expanded="false" aria-haspopup="true">Text Tools ▾</button>
+            <div class="nav-dropdown-menu">
+              <ul>
+                <li><a href="sentence-counter.html">Sentence Counter</a></li>
+                <li><a href="paragraph-counter.html">Paragraph Counter</a></li>
+                <li><a href="reading-time-calculator.html">Reading Time Calculator</a></li>
+                <li><a href="speaking-time-calculator.html">Speaking Time Calculator</a></li>
+                <li><a href="keyword-density-checker.html">Keyword Density Checker</a></li>
+                <li><a href="word-frequency-counter.html">Word Frequency Counter</a></li>
+                <li><a href="text-case-converter.html">Text Case Converter</a></li>
+                <li><a href="remove-extra-spaces.html">Remove Extra Spaces</a></li>
+                <li><a href="remove-duplicate-lines.html">Remove Duplicate Lines</a></li>
+                <li><a href="find-and-replace.html">Find and Replace Text</a></li>
+                <li><a href="text-sorter.html">Text Sorter</a></li>
+                <li><a href="reverse-text.html">Reverse Text</a></li>
+                <li><a href="remove-line-breaks.html">Remove Line Breaks</a></li>
+                <li><a href="text-comparison.html">Text Comparison Tool</a></li>
+                <li><a href="lorem-ipsum-generator.html">Lorem Ipsum Generator</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#tools">Tools</a></li>
+          <li><span aria-current="page">Character Counter</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-header">
+        <h1>Character Counter</h1>
+        <p>Count characters with and without spaces. Useful for social posts, meta descriptions and any field with a character limit.</p>
+      </div>
+
+      <section class="section" style="padding-top: 8px;">
+        <div class="editor-layout" data-word-counter>
+          <div class="editor-panel">
+            <div class="editor-toolbar">
+              <button class="btn btn-ghost btn-sm" type="button" data-paste>Paste</button>
+              <button class="btn btn-ghost btn-sm" type="button" data-copy>Copy</button>
+              <button class="btn btn-ghost btn-sm" type="button" data-download>Download .txt</button>
+              <button class="btn btn-ghost btn-sm" type="button" data-clear>Clear</button>
+            </div>
+            <label for="cc-text" class="sr-only">Your text</label>
+            <textarea id="cc-text" class="text-input" data-text-input placeholder="Type or paste your text here..." rows="12"></textarea>
+            <p class="form-message" data-editor-message aria-live="polite"></p>
+          </div>
+          <aside class="stats-panel" aria-label="Character statistics">
+            <h2 class="mt-0" style="font-size:1.15rem;">Character Count</h2>
+            <div class="stats-grid">
+              <div class="stat-card"><span class="stat-label">Characters (with spaces)</span><span class="stat-value" data-stat-chars>0</span></div>
+              <div class="stat-card"><span class="stat-label">Characters (no spaces)</span><span class="stat-value" data-stat-chars-no-spaces>0</span></div>
+              <div class="stat-card"><span class="stat-label">Words</span><span class="stat-value" data-stat-words>0</span></div>
+              <div class="stat-card"><span class="stat-label">Sentences</span><span class="stat-value" data-stat-sentences>0</span></div>
+            </div>
+          </aside>
+        </div>
+
+        <div data-ad-slot="tool-character-counter" aria-label="Advertisement space"></div>
+
+        <div class="prose mt-4">
+          <h2>What the Character Counter Measures</h2>
+          <p>The counter reports two values: characters including spaces and characters excluding spaces. Both are based on JavaScript string length, which counts Unicode code units. Most common Latin characters count as one unit; some emoji and rare symbols use two or more code units.</p>
+
+          <h2>Common Character Limits</h2>
+          <ul>
+            <li>Meta description: often around 150–160 characters.</li>
+            <li>Page title: often around 50–60 characters.</li>
+            <li>Social posts: platform-specific and subject to change.</li>
+            <li>Headline or subject line: varies by platform.</li>
+          </ul>
+          <p>Always check the current official limit for the platform you are using.</p>
+
+          <h2>Related Tools</h2>
+          <ul class="related-tools">
+            <li><a href="word-counter.html">Word Counter</a></li>
+            <li><a href="sentence-counter.html">Sentence Counter</a></li>
+            <li><a href="remove-extra-spaces.html">Remove Extra Spaces</a></li>
+            <li><a href="remove-line-breaks.html">Remove Line Breaks</a></li>
+          </ul>
+
+          <h2>Related Articles</h2>
+          <ul>
+            <li><a href="../blog/word-count-vs-character-count.html">Word Count vs Character Count</a></li>
+            <li><a href="../blog/how-to-write-clear-concise-paragraph.html">How to Write a Clear and Concise Paragraph</a></li>
+          </ul>
+
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq">
+            <details>
+              <summary>Do line breaks count as characters?</summary>
+              <p>Yes. Line breaks are characters and are included in the total length. They are removed in the “no spaces” count.</p>
+            </details>
+            <details>
+              <summary>Do emoji count as one character?</summary>
+              <p>Not always. Many emoji are represented by more than one Unicode code unit, so they may increase the count by more than one.</p>
+            </details>
+            <details>
+              <summary>Why does the count differ from another tool?</summary>
+              <p>Tools may count Unicode code units, grapheme clusters or bytes. Small differences are expected for emoji and some non-Latin scripts.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Text Tools</h3>
+          <ul>
+            <li><a href="word-counter.html">Word Counter</a></li>
+            <li><a href="character-counter.html">Character Counter</a></li>
+            <li><a href="sentence-counter.html">Sentence Counter</a></li>
+            <li><a href="paragraph-counter.html">Paragraph Counter</a></li>
+            <li><a href="reading-time-calculator.html">Reading Time</a></li>
+            <li><a href="speaking-time-calculator.html">Speaking Time</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>More Tools</h3>
+          <ul>
+            <li><a href="keyword-density-checker.html">Keyword Density</a></li>
+            <li><a href="text-case-converter.html">Case Converter</a></li>
+            <li><a href="remove-extra-spaces.html">Remove Spaces</a></li>
+            <li><a href="remove-duplicate-lines.html">Remove Duplicates</a></li>
+            <li><a href="text-comparison.html">Compare Text</a></li>
+            <li><a href="lorem-ipsum-generator.html">Lorem Ipsum</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Blog</h3>
+          <ul>
+            <li><a href="../blog/index.html">All Articles</a></li>
+            <li><a href="../blog/how-to-count-words-in-an-essay.html">Count Essay Words</a></li>
+            <li><a href="../blog/word-count-vs-character-count.html">Words vs Characters</a></li>
+            <li><a href="../blog/how-to-calculate-reading-time.html">Reading Time</a></li>
+            <li><a href="../blog/how-to-check-keyword-density.html">Keyword Density</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Site</h3>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Use</a></li>
+            <li><a href="../disclaimer.html">Disclaimer</a></li>
+            <li><a href="../cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="../accessibility.html">Accessibility</a></li>
+            <li><a href="../editorial-policy.html">Editorial Policy</a></li>
+            <li><a href="../sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">© <span data-current-year>2025</span> <span data-brand>Textora</span>. All rights reserved.</p>
+        <p class="mb-0">Contact: <a href="mailto:contact@YOURDOMAIN.com" data-contact-email>contact@YOURDOMAIN.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/ads.js"></script>
+  <script src="../js/word-counter.js"></script>
+</body>
+</html>
