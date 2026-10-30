@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text Sorter - Sort Lines Alphabetically or Numerically | Textora</title>
+  <meta name="description" content="Sort lines alphabetically, numerically, by length or in reverse. Free online line sorter.">
+  <link rel="canonical" href="https://YOURDOMAIN.com/tools/text-sorter.html">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/responsive.css">
+  <link rel="stylesheet" href="../css/print.css" media="print">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="../index.html" aria-label="Textora home">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span data-brand>Textora</span>
+      </a>
+      <button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+      <nav class="primary-nav" id="primary-nav" data-primary-nav aria-label="Primary">
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="word-counter.html">Word Counter</a></li>
+          <li><a href="character-counter.html">Character Counter</a></li>
+          <li class="nav-dropdown">
+            <button type="button" data-dropdown-toggle aria-expanded="false" aria-haspopup="true">Text Tools ▾</button>
+            <div class="nav-dropdown-menu">
+              <ul>
+                <li><a href="sentence-counter.html">Sentence Counter</a></li>
+                <li><a href="paragraph-counter.html">Paragraph Counter</a></li>
+                <li><a href="reading-time-calculator.html">Reading Time Calculator</a></li>
+                <li><a href="speaking-time-calculator.html">Speaking Time Calculator</a></li>
+                <li><a href="keyword-density-checker.html">Keyword Density Checker</a></li>
+                <li><a href="word-frequency-counter.html">Word Frequency Counter</a></li>
+                <li><a href="text-case-converter.html">Text Case Converter</a></li>
+                <li><a href="remove-extra-spaces.html">Remove Extra Spaces</a></li>
+                <li><a href="remove-duplicate-lines.html">Remove Duplicate Lines</a></li>
+                <li><a href="find-and-replace.html">Find and Replace Text</a></li>
+                <li><a href="text-sorter.html" aria-current="page">Text Sorter</a></li>
+                <li><a href="reverse-text.html">Reverse Text</a></li>
+                <li><a href="remove-line-breaks.html">Remove Line Breaks</a></li>
+                <li><a href="text-comparison.html">Text Comparison Tool</a></li>
+                <li><a href="lorem-ipsum-generator.html">Lorem Ipsum Generator</a></li>
+              </ul>
+            </div>
+          </li>
+          <li><a href="../blog/index.html">Blog</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="../faq.html">FAQ</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <ol>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../index.html#tools">Tools</a></li>
+          <li><span aria-current="page">Text Sorter</span></li>
+        </ol>
+      </nav>
+
+      <div class="page-header">
+        <h1>Text Sorter</h1>
+        <p>Sort lines alphabetically, numerically, by length or in reverse.</p>
+      </div>
+
+      <section class="section" style="padding-top: 8px;">
+        <div class="editor-layout" data-transform="sort-lines">
+          <div class="editor-panel">
+            <div class="form-field">
+              <label for="ts-order">Sort order</label>
+              <select id="ts-order" data-sort-order>
+                <option value="asc">Alphabetical A–Z</option>
+                <option value="desc">Alphabetical Z–A</option>
+                <option value="numeric">Numeric (smallest first)</option>
+                <option value="length">By line length (shortest first)</option>
+              </select>
+            </div>
+            <div class="check-row">
+              <input type="checkbox" id="ts-empty" data-remove-empty checked>
+              <label for="ts-empty">Remove empty lines</label>
+            </div>
+            <div class="editor-toolbar">
+              <button class="btn btn-primary btn-sm" type="button" data-run>Sort</button>
+              <button class="btn btn-ghost btn-sm" type="button" data-copy>Copy result</button>
+              <button class="btn btn-ghost btn-sm" type="button" data-clear>Clear</button>
+              <button class="btn btn-ghost btn-sm" type="button" data-download>Download .txt</button>
+            </div>
+            <label for="ts-input" class="sr-only">Input lines</label>
+            <textarea id="ts-input" class="text-input" data-text-input rows="10" placeholder="Paste lines here..."></textarea>
+            <p class="form-message" data-message aria-live="polite"></p>
+          </div>
+          <aside class="stats-panel">
+            <h2 class="mt-0" style="font-size:1.15rem;">Sorted result</h2>
+            <label for="ts-output" class="sr-only">Sorted lines</label>
+            <textarea id="ts-output" class="text-input" data-text-output rows="12" readonly placeholder="Sorted lines appear here..."></textarea>
+          </aside>
+        </div>
+
+        <div class="prose mt-4">
+          <h2>Sorting Rules</h2>
+          <p>Alphabetical sorting uses locale-aware comparison. Numeric sorting uses <code>parseFloat</code>, so non-numeric lines may sort unpredictably. Length sorting compares the number of characters in each line.</p>
+          <h2>Common Uses</h2>
+          <ul>
+            <li>Alphabetizing name or keyword lists.</li>
+            <li>Sorting numeric IDs or prices.</li>
+            <li>Ordering lines by length for a visual check.</li>
+          </ul>
+          <h2>Related Tools</h2>
+          <ul class="related-tools">
+            <li><a href="remove-duplicate-lines.html">Remove Duplicate Lines</a></li>
+            <li><a href="reverse-text.html">Reverse Text</a></li>
+            <li><a href="remove-extra-spaces.html">Remove Extra Spaces</a></li>
+          </ul>
+          <h2>Frequently Asked Questions</h2>
+          <div class="faq">
+            <details>
+              <summary>Is alphabetical sorting case-sensitive?</summary>
+              <p>It uses locale comparison, which typically places uppercase and lowercase letters near each other. Exact order can vary by browser locale.</p>
+            </details>
+            <details>
+              <summary>Can I sort comma-separated values?</summary>
+              <p>Only if each value is on its own line. Convert commas to line breaks first with Find and Replace.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <h3>Text Tools</h3>
+          <ul>
+            <li><a href="word-counter.html">Word Counter</a></li>
+            <li><a href="character-counter.html">Character Counter</a></li>
+            <li><a href="sentence-counter.html">Sentence Counter</a></li>
+            <li><a href="paragraph-counter.html">Paragraph Counter</a></li>
+            <li><a href="reading-time-calculator.html">Reading Time</a></li>
+            <li><a href="speaking-time-calculator.html">Speaking Time</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>More Tools</h3>
+          <ul>
+            <li><a href="keyword-density-checker.html">Keyword Density</a></li>
+            <li><a href="text-case-converter.html">Case Converter</a></li>
+            <li><a href="remove-extra-spaces.html">Remove Spaces</a></li>
+            <li><a href="remove-duplicate-lines.html">Remove Duplicates</a></li>
+            <li><a href="text-comparison.html">Compare Text</a></li>
+            <li><a href="lorem-ipsum-generator.html">Lorem Ipsum</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Blog</h3>
+          <ul>
+            <li><a href="../blog/index.html">All Articles</a></li>
+            <li><a href="../blog/how-to-count-words-in-an-essay.html">Count Essay Words</a></li>
+            <li><a href="../blog/word-count-vs-character-count.html">Words vs Characters</a></li>
+            <li><a href="../blog/how-to-calculate-reading-time.html">Reading Time</a></li>
+            <li><a href="../blog/how-to-check-keyword-density.html">Keyword Density</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Site</h3>
+          <ul>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact</a></li>
+            <li><a href="../faq.html">FAQ</a></li>
+            <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+            <li><a href="../terms.html">Terms of Use</a></li>
+            <li><a href="../disclaimer.html">Disclaimer</a></li>
+            <li><a href="../cookie-policy.html">Cookie Policy</a></li>
+            <li><a href="../accessibility.html">Accessibility</a></li>
+            <li><a href="../editorial-policy.html">Editorial Policy</a></li>
+            <li><a href="../sitemap.html">Sitemap</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">© <span data-current-year>2025</span> <span data-brand>Textora</span>. All rights reserved.</p>
+        <p class="mb-0">Contact: <a href="mailto:contact@YOURDOMAIN.com" data-contact-email>contact@YOURDOMAIN.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/config.js"></script>
+  <script src="../js/common.js"></script>
+  <script src="../js/navigation.js"></script>
+  <script src="../js/ads.js"></script>
+  <script src="../js/text-transformations.js"></script>
+</body>
+</html>
