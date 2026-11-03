@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frequently Asked Questions | Textora</title>
+  <meta name="description" content="Answers to common questions about Textora's word counter, text tools, privacy, accuracy and advertising.">
+  <link rel="canonical" href="https://YOURDOMAIN.com/faq.html">
+  <meta name="robots" content="index, follow">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/print.css" media="print">
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"FAQPage","mainEntity":[
+    {"@type":"Question","name":"How is a word counted?","acceptedAnswer":{"@type":"Answer","text":"Text is split on whitespace. Each sequence of characters separated by spaces, tabs or line breaks counts as one word."}},
+    {"@type":"Question","name":"Are spaces included in character counts?","acceptedAnswer":{"@type":"Answer","text":"Both are shown: characters including spaces and characters excluding spaces."}},
+    {"@type":"Question","name":"Does the site work offline?","acceptedAnswer":{"@type":"Answer","text":"After the page loads, counting and text processing run in your browser without network requests."}},
+    {"@type":"Question","name":"Is my text uploaded to a server?","acceptedAnswer":{"@type":"Answer","text":"The tools process text locally in your browser. The site does not send your text to a server."}}
+  ]}
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="index.html" aria-label="Textora home"><span class="brand-mark" aria-hidden="true">T</span><span data-brand>Textora</span></a>
+      <button class="menu-toggle" data-menu-toggle aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 6h18M3 12h18M3 18h18"/></svg></button>
+      <nav class="primary-nav" id="primary-nav" data-primary-nav aria-label="Primary"><ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="tools/word-counter.html">Word Counter</a></li>
+        <li><a href="tools/character-counter.html">Character Counter</a></li>
+        <li class="nav-dropdown"><button type="button" data-dropdown-toggle aria-expanded="false" aria-haspopup="true">Text Tools ▾</button><div class="nav-dropdown-menu"><ul>
+          <li><a href="tools/sentence-counter.html">Sentence Counter</a></li>
+          <li><a href="tools/paragraph-counter.html">Paragraph Counter</a></li>
+          <li><a href="tools/reading-time-calculator.html">Reading Time Calculator</a></li>
+          <li><a href="tools/speaking-time-calculator.html">Speaking Time Calculator</a></li>
+          <li><a href="tools/keyword-density-checker.html">Keyword Density Checker</a></li>
+          <li><a href="tools/word-frequency-counter.html">Word Frequency Counter</a></li>
+          <li><a href="tools/text-case-converter.html">Text Case Converter</a></li>
+          <li><a href="tools/remove-extra-spaces.html">Remove Extra Spaces</a></li>
+          <li><a href="tools/remove-duplicate-lines.html">Remove Duplicate Lines</a></li>
+          <li><a href="tools/find-and-replace.html">Find and Replace Text</a></li>
+          <li><a href="tools/text-sorter.html">Text Sorter</a></li>
+          <li><a href="tools/reverse-text.html">Reverse Text</a></li>
+          <li><a href="tools/remove-line-breaks.html">Remove Line Breaks</a></li>
+          <li><a href="tools/text-comparison.html">Text Comparison Tool</a></li>
+          <li><a href="tools/lorem-ipsum-generator.html">Lorem Ipsum Generator</a></li>
+        </ul></div></li>
+        <li><a href="blog/index.html">Blog</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="faq.html" aria-current="page">FAQ</a></li>
+      </ul></nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <div class="container">
+      <nav class="breadcrumbs" aria-label="Breadcrumb"><ol>
+        <li><a href="index.html">Home</a></li>
+        <li><span aria-current="page">FAQ</span></li>
+      </ol></nav>
+
+      <div class="page-header">
+        <h1>Frequently Asked Questions</h1>
+        <p>Answers about the tools, privacy and how counts are calculated.</p>
+      </div>
+
+      <section class="section" style="padding-top: 8px;">
+        <div class="prose">
+          <h2>Word and Character Counting</h2>
+          <div class="faq">
+            <details>
+              <summary>How is a word counted?</summary>
+              <p>Text is split on whitespace. Each sequence of characters separated by spaces, tabs or line breaks counts as one word. Punctuation attached to a word does not create a separate word. This is a mechanical rule and may not match every language's tokenization.</p>
+            </details>
+            <details>
+              <summary>Are spaces included in character counts?</summary>
+              <p>Both are shown. "Characters including spaces" counts every character. "Characters excluding spaces" removes whitespace before counting.</p>
+            </details>
+            <details>
+              <summary>How are sentences counted?</summary>
+              <p>Sentences end at a period, exclamation mark or question mark followed by whitespace or the end of the text. Non-empty text with no ending punctuation counts as one sentence.</p>
+            </details>
+            <details>
+              <summary>How are paragraphs counted?</summary>
+              <p>Paragraphs are separated by blank lines. A single block of text with no blank line is one paragraph.</p>
+            </details>
+            <details>
+              <summary>Why do different tools show different counts?</summary>
+              <p>Tools apply different rules for punctuation, hyphenated words, emoji and non-Latin scripts. Small differences are normal.</p>
+            </details>
+          </div>
+
+          <h2>Reading and Speaking Time</h2>
+          <div class="faq">
+            <details>
+              <summary>How is reading time estimated?</summary>
+              <p>Word count divided by an assumed words-per-minute rate. The default is 238 WPM. You can change it on the <a href="tools/reading-time-calculator.html">Reading Time Calculator</a>.</p>
+            </details>
+            <details>
+              <summary>How is speaking time estimated?</summary>
+              <p>Word count divided by an assumed speaking rate. The default is 150 WPM. Adjust it on the <a href="tools/speaking-time-calculator.html">Speaking Time Calculator</a>.</p>
+            </details>
+            <details>
+              <summary>Why is speaking slower than reading?</summary>
+              <p>Speaking involves articulation, pauses and audience awareness. Most speakers deliver at 120–180 WPM.</p>
+            </details>
+          </div>
+
+          <h2>Privacy and Data</h2>
+          <div class="faq">
+            <details>
+              <summary>Is my text uploaded to a server?</summary>
+              <p>The tools process text locally in your browser. The site does not send your text to a server. See the <a href="privacy-policy.html">Privacy Policy</a> for details about hosting and future services.</p>
+            </details>
+            <details>
+              <summary>Does the site work offline?</summary>
+              <p>After the page loads, counting and text processing run in your browser without network requests. Reloading the page requires a connection unless the browser has cached it.</p>
+            </details>
+            <details>
+              <summary>Do you use cookies?</summary>
+              <p>In the default configuration, this site does not set tracking cookies. See the <a href="cookie-policy.html">Cookie Policy</a> for details.</p>
+            </details>
+            <details>
+              <summary>Are there ads?</summary>
+              <p>Advertising is currently disabled. If enabled after approval, ads will be clearly separated from content. See the <a href="privacy-policy.html">Privacy Policy</a>.</p>
+            </details>
+          </div>
+
+          <h2>Tools and Features</h2>
+          <div class="faq">
+            <details>
+              <summary>Can I download my text?</summary>
+              <p>Yes. The main editor and most tools have a "Download .txt" button.</p>
+            </details>
+            <details>
+              <summary>Does the tool support long documents?</summary>
+              <p>Browser text areas can handle long documents. Very large texts may slow down live statistics in older devices.</p>
+            </details>
+            <details>
+              <summary>Can I use the tools on mobile?</summary>
+              <p>Yes. The site is responsive and the editor works on mobile browsers.</p>
+            </details>
+            <details>
+              <summary>Does the keyword density tool count phrases?</summary>
+              <p>No. It analyzes individual words. Phrase-level analysis requires a different approach.</p>
+            </details>
+            <details>
+              <summary>Why does the text comparison tool show line-level changes?</summary>
+              <p>It compares lines rather than words. A word-level change appears as a removed line plus an added line.</p>
+            </details>
+          </div>
+
+          <h2>Site and Editorial</h2>
+          <div class="faq">
+            <details>
+              <summary>Who writes the articles?</summary>
+              <p>Articles are produced by the Textora Editorial Team. See the <a href="editorial-policy.html">Editorial Policy</a>.</p>
+            </details>
+            <details>
+              <summary>How do I report an error?</summary>
+              <p>Use the <a href="contact.html">Contact page</a> to describe the issue.</p>
+            </details>
+            <details>
+              <summary>How do I report an accessibility problem?</summary>
+              <p>Use the <a href="contact.html">Contact page</a> or email the address listed in the <a href="accessibility.html">Accessibility Statement</a>.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col"><h3>Text Tools</h3><ul><li><a href="tools/word-counter.html">Word Counter</a></li><li><a href="tools/character-counter.html">Character Counter</a></li><li><a href="tools/sentence-counter.html">Sentence Counter</a></li><li><a href="tools/paragraph-counter.html">Paragraph Counter</a></li><li><a href="tools/reading-time-calculator.html">Reading Time</a></li><li><a href="tools/speaking-time-calculator.html">Speaking Time</a></li></ul></div>
+        <div class="footer-col"><h3>More Tools</h3><ul><li><a href="tools/keyword-density-checker.html">Keyword Density</a></li><li><a href="tools/text-case-converter.html">Case Converter</a></li><li><a href="tools/remove-extra-spaces.html">Remove Spaces</a></li><li><a href="tools/remove-duplicate-lines.html">Remove Duplicates</a></li><li><a href="tools/text-comparison.html">Compare Text</a></li><li><a href="tools/lorem-ipsum-generator.html">Lorem Ipsum</a></li></ul></div>
+        <div class="footer-col"><h3>Blog</h3><ul><li><a href="blog/index.html">All Articles</a></li><li><a href="blog/how-to-count-words-in-an-essay.html">Count Essay Words</a></li><li><a href="blog/word-count-vs-character-count.html">Words vs Characters</a></li><li><a href="blog/how-to-calculate-reading-time.html">Reading Time</a></li><li><a href="blog/how-to-check-keyword-density.html">Keyword Density</a></li></ul></div>
+        <div class="footer-col"><h3>Site</h3><ul><li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="faq.html">FAQ</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="disclaimer.html">Disclaimer</a></li><li><a href="cookie-policy.html">Cookie Policy</a></li><li><a href="accessibility.html">Accessibility</a></li><li><a href="editorial-policy.html">Editorial Policy</a></li><li><a href="sitemap.html">Sitemap</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <p class="mb-0">© <span data-current-year>2025</span> <span data-brand>Textora</span>. All rights reserved.</p>
+        <p class="mb-0">Contact: <a href="mailto:contact@YOURDOMAIN.com" data-contact-email>contact@YOURDOMAIN.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/config.js"></script>
+  <script src="js/common.js"></script>
+  <script src="js/navigation.js"></script>
+  <script src="js/ads.js"></script>
+</body>
+</html>
