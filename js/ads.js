@@ -2,6 +2,7 @@
  * Textora - Advertising Loader
  * Loads Google AdSense only when explicitly enabled in config.
  * No third-party ad scripts are loaded while adsEnabled is false.
+ * No placeholder boxes are rendered while adsEnabled is false.
  */
 (function () {
   "use strict";
@@ -26,11 +27,14 @@
     document.head.appendChild(script);
   }
 
-  function renderPlaceholders() {
+  function renderSlots() {
     const slots = document.querySelectorAll("[data-ad-slot]");
     slots.forEach(function (slot) {
+      // Clear any previous content
+      slot.innerHTML = "";
+
       if (cfg.adsEnabled && cfg.adsensePublisherId) {
-        // Populate real ad unit
+        // Populate a real ad unit
         const ins = document.createElement("ins");
         ins.className = "adsbygoogle";
         ins.style.display = "block";
@@ -42,21 +46,17 @@
         try {
           (window.adsbygoogle = window.adsbygoogle || []).push({});
         } catch (e) {
-          /* ignore */
+          /* AdSense not loaded yet; will retry on next push */
         }
-      } else {
-        // Development placeholder: clearly labeled, hidden from assistive tech
-        slot.innerHTML =
-          '<div class="ad-placeholder" aria-hidden="true">' +
-          '<span class="ad-placeholder__label">Ad space</span>' +
-          '<span class="ad-placeholder__hint">Reserved for Google AdSense after approval</span>' +
-          "</div>";
       }
+      // When adsEnabled is false: render nothing at all.
+      // The container stays in the DOM (empty), takes up zero height,
+      // and no "Ad space" placeholder box is shown to visitors.
     });
   }
 
   document.addEventListener("DOMContentLoaded", function () {
     loadAdSense();
-    renderPlaceholders();
+    renderSlots();
   });
 })();
