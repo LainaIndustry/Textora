@@ -1,7 +1,6 @@
 /**
  * Textora - Site Configuration
  * Central configuration for branding, domain, contact, and advertising.
- * Update these values before production deployment.
  */
 const TEXTORA_CONFIG = {
   // Brand
@@ -9,15 +8,15 @@ const TEXTORA_CONFIG = {
   brandTagline: "Free Online Text Tools",
 
   // Production domain (no trailing slash)
-  siteUrl: "https://YOURDOMAIN.com",
+  siteUrl: "https://textora.example.com",
 
-  // Contact
-  contactEmail: "contact@YOURDOMAIN.com",
+  // Contact — MUST be a real, monitored email you control
+  contactEmail: "textora1counter@gmail.com",
 
   // Advertising (Google AdSense)
   // IMPORTANT: Keep adsEnabled = false until AdSense approval is granted.
   adsEnabled: false,
-  adsensePublisherId: "", // e.g. "ca-pub-XXXXXXXXXXXXXXXX"
+  adsensePublisherId: "",
   adsenseAutoAds: false,
 
   // Reading / speaking assumptions
@@ -28,7 +27,6 @@ const TEXTORA_CONFIG = {
   copyrightStartYear: 2025
 };
 
-// Make available globally in browser
 if (typeof window !== "undefined") {
   window.TEXTORA_CONFIG = TEXTORA_CONFIG;
 }
