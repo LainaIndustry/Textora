@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Contact Textora | Questions, Corrections & Feedback</title>
-  <meta name="description" content="Contact Textora by email for questions, corrections, accessibility feedback or general enquiries. Details on what to include and how replies are handled.">
+  <meta name="description" content="Contact Textora by email for questions, corrections, accessibility feedback or general enquiries. The email address is shown on this page and can be copied with one click.">
   <link rel="canonical" href="https://textora1counter.vercel.app/contact.html">
   <meta name="robots" content="index, follow">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Contact Textora">
-  <meta property="og:description" content="Contact Textora by email for questions, corrections, accessibility feedback or general enquiries.">
+  <meta property="og:description" content="Contact Textora by email for questions, corrections or accessibility feedback.">
   <meta property="og:url" content="https://textora1counter.vercel.app/contact.html">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/responsive.css">
@@ -29,18 +29,13 @@
   }
   </script>
   <style>
-    /* Small, self-contained styles for the contact card and copy button */
     .contact-card {
       background: var(--color-surface, #ffffff);
       border: 1px solid var(--color-border, #e2ded6);
       border-radius: var(--radius, 10px);
       box-shadow: var(--shadow-sm, 0 1px 2px rgba(20,24,32,0.06));
       padding: 24px;
-      margin: 16px 0 28px;
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-      gap: 16px;
+      margin: 16px 0 8px;
     }
     .contact-card__label {
       font-size: 0.78rem;
@@ -48,35 +43,42 @@
       letter-spacing: 0.06em;
       color: var(--color-muted, #5b6470);
       font-weight: 600;
-      width: 100%;
-      margin-bottom: 4px;
+      margin-bottom: 8px;
     }
     .contact-card__email {
-      font-size: 1.35rem;
+      display: block;
+      font-size: 1.45rem;
       font-weight: 700;
-      color: var(--color-accent, #2f6fed);
+      color: var(--color-text, #1f2328);
       text-decoration: none;
       word-break: break-all;
-    }
-    .contact-card__email:hover {
-      color: var(--color-accent-dark, #1f54c4);
-      text-decoration: underline;
+      margin-bottom: 16px;
+      padding: 12px 14px;
+      background: var(--color-surface-alt, #f4f2ed);
+      border: 1px solid var(--color-border, #e2ded6);
+      border-radius: var(--radius-sm, 6px);
+      user-select: all;
+      -webkit-user-select: all;
     }
     .contact-card__actions {
       display: flex;
       flex-wrap: wrap;
       gap: 10px;
-      margin-left: auto;
     }
-    .contact-note {
-      background: var(--color-surface-alt, #f4f2ed);
-      border-left: 4px solid var(--color-accent, #2f6fed);
-      padding: 14px 18px;
-      border-radius: 0 6px 6px 0;
-      margin: 20px 0;
+    .contact-card__help {
+      font-size: 0.88rem;
+      color: var(--color-muted, #5b6470);
+      margin-top: 10px;
+    }
+    .contact-feedback {
+      min-height: 1.6em;
+      margin: 8px 0 20px;
       font-size: 0.95rem;
+      font-weight: 500;
     }
-    .contact-note p:last-child { margin-bottom: 0; }
+    .contact-feedback--success { color: var(--color-success, #1a7f4b); }
+    .contact-feedback--error { color: var(--color-error, #b42318); }
+    .contact-feedback--info { color: var(--color-muted, #5b6470); }
     .contact-topics {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -98,17 +100,15 @@
       font-size: 0.9rem;
       color: var(--color-muted, #5b6470);
     }
-    .copy-message {
-      font-size: 0.88rem;
-      min-height: 1.4em;
-      margin: 8px 0 0;
+    .contact-note {
+      background: var(--color-surface-alt, #f4f2ed);
+      border-left: 4px solid var(--color-accent, #2f6fed);
+      padding: 14px 18px;
+      border-radius: 0 6px 6px 0;
+      margin: 20px 0;
+      font-size: 0.95rem;
     }
-    .copy-message--success { color: var(--color-success, #1a7f4b); }
-    .copy-message--error { color: var(--color-error, #b42318); }
-    @media (max-width: 640px) {
-      .contact-card__actions { margin-left: 0; width: 100%; }
-      .contact-card__actions .btn { flex: 1 1 auto; }
-    }
+    .contact-note p:last-child { margin-bottom: 0; }
   </style>
 </head>
 <body>
@@ -169,34 +169,60 @@
 
       <div class="page-header">
         <h1>Contact Textora</h1>
-        <p>Questions, corrections, accessibility feedback and general enquiries are welcome. The fastest way to reach the site operator is by email.</p>
+        <p>Questions, corrections, accessibility feedback and general enquiries are welcome. The email address is shown below and can be copied with one click.</p>
       </div>
 
       <section class="section" style="padding-top: 8px;">
-        <!-- Visible, prominent contact card -->
+
+        <!-- Primary email card -->
         <div class="contact-card" id="contact-card">
-          <span class="contact-card__label">Email</span>
+          <div class="contact-card__label">Email address</div>
+
+          <!-- The address itself: selectable text, also a mailto link that opens
+               the user's email app when one is registered. If no mail app is
+               installed, the address is still fully visible and copyable. -->
           <a
             class="contact-card__email"
+            id="email-link"
             href="mailto:textora1counter@gmail.com?subject=Textora%20enquiry"
-            aria-label="Email Textora at textora1counter@gmail.com"
+            rel="nofollow"
+            aria-label="Email Textora at textora1counter@gmail.com. Select the address to copy it."
           >textora1counter@gmail.com</a>
+
           <div class="contact-card__actions">
             <button
               type="button"
-              class="btn btn-secondary btn-sm"
+              class="btn btn-primary"
               id="copy-email-btn"
               data-email="textora1counter@gmail.com"
-            >Copy email</button>
-            <a
-              class="btn btn-primary btn-sm"
-              href="mailto:textora1counter@gmail.com?subject=Textora%20enquiry"
-            >Open email app</a>
+            >Copy email address</button>
+            <button
+              type="button"
+              class="btn btn-secondary"
+              id="select-email-btn"
+            >Select address</button>
           </div>
+
+          <p class="contact-card__help">
+            If the “Copy email address” button is blocked by your browser,
+            click “Select address”, then copy with
+            <kbd>Ctrl</kbd> + <kbd>C</kbd> (Windows/Linux) or
+            <kbd>Cmd</kbd> + <kbd>C</kbd> (Mac).
+          </p>
         </div>
-        <p class="copy-message" id="copy-email-msg" aria-live="polite"></p>
+
+        <p class="contact-feedback" id="contact-feedback" aria-live="polite"></p>
 
         <div class="prose">
+          <h2>How to Email Textora</h2>
+          <p>The site operator is reached by email at <strong>textora1counter@gmail.com</strong>. You can:</p>
+          <ol>
+            <li>Click <strong>Copy email address</strong> above, then paste it into your email app’s “To” field.</li>
+            <li>Or click the visible address itself; it will try to open your email app if one is set up on this device.</li>
+            <li>Or click <strong>Select address</strong>, then copy with <kbd>Ctrl</kbd> + <kbd>C</kbd> / <kbd>Cmd</kbd> + <kbd>C</kbd>.</li>
+          </ol>
+          <p>If clicking the address does nothing, that means no email app is registered on this device. Copying the address still works — use one of the options above.</p>
+
           <h2>What You Can Contact About</h2>
           <div class="contact-topics">
             <div class="contact-topic">
@@ -218,7 +244,6 @@
           </div>
 
           <h2>What to Include in Your Email</h2>
-          <p>To help you get a useful reply, please include:</p>
           <ul>
             <li><strong>The page URL</strong> you are writing about, if your message relates to a specific page or tool.</li>
             <li><strong>A clear description</strong> of the issue, question or suggestion.</li>
@@ -234,7 +259,6 @@
           </div>
 
           <h2>What Is Not Answered</h2>
-          <p>The following are not answered and will be ignored:</p>
           <ul>
             <li>Guest post and link exchange requests.</li>
             <li>Paid placement or sponsored content proposals.</li>
@@ -320,57 +344,82 @@
   <script src="js/navigation.js"></script>
   <script src="js/ads.js"></script>
   <script>
-    /* Copy-email button — self-contained, no dependency on common.js */
+    /* Copy-email and select-address buttons — no dependency on common.js */
     (function () {
       "use strict";
-      var btn = document.getElementById("copy-email-btn");
-      var msg = document.getElementById("copy-email-msg");
-      if (!btn || !msg) return;
 
-      var email = btn.getAttribute("data-email") || "textora1counter@gmail.com";
+      var emailLink = document.getElementById("email-link");
+      var copyBtn = document.getElementById("copy-email-btn");
+      var selectBtn = document.getElementById("select-email-btn");
+      var feedback = document.getElementById("contact-feedback");
 
-      function showMessage(text, type) {
-        msg.textContent = text;
-        msg.className = "copy-message copy-message--" + type;
-        clearTimeout(showMessage._t);
-        showMessage._t = setTimeout(function () {
-          msg.textContent = "";
-          msg.className = "copy-message";
-        }, 4000);
+      if (!emailLink || !copyBtn || !selectBtn || !feedback) return;
+
+      var EMAIL = copyBtn.getAttribute("data-email") || "textora1counter@gmail.com";
+
+      function setFeedback(text, type) {
+        feedback.textContent = text;
+        feedback.className = "contact-feedback contact-feedback--" + type;
+        clearTimeout(setFeedback._t);
+        setFeedback._t = setTimeout(function () {
+          feedback.textContent = "";
+          feedback.className = "contact-feedback";
+        }, 6000);
       }
 
       function fallbackCopy(text) {
-        var ta = document.createElement("textarea");
-        ta.value = text;
-        ta.setAttribute("readonly", "");
-        ta.style.position = "fixed";
-        ta.style.opacity = "0";
-        document.body.appendChild(ta);
-        ta.select();
-        var ok = false;
-        try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
-        document.body.removeChild(ta);
-        return ok;
+        try {
+          var ta = document.createElement("textarea");
+          ta.value = text;
+          ta.setAttribute("readonly", "");
+          ta.style.position = "fixed";
+          ta.style.top = "-1000px";
+          ta.style.opacity = "0";
+          document.body.appendChild(ta);
+          ta.select();
+          ta.setSelectionRange(0, text.length);
+          var ok = false;
+          try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+          document.body.removeChild(ta);
+          return ok;
+        } catch (e) {
+          return false;
+        }
       }
 
-      btn.addEventListener("click", function () {
+      copyBtn.addEventListener("click", function () {
         if (navigator.clipboard && navigator.clipboard.writeText) {
-          navigator.clipboard.writeText(email).then(
-            function () { showMessage("Email address copied to clipboard.", "success"); },
+          navigator.clipboard.writeText(EMAIL).then(
             function () {
-              if (fallbackCopy(email)) {
-                showMessage("Email address copied to clipboard.", "success");
+              setFeedback("Email address copied. Paste it into your email app's “To” field.", "success");
+            },
+            function () {
+              if (fallbackCopy(EMAIL)) {
+                setFeedback("Email address copied. Paste it into your email app's “To” field.", "success");
               } else {
-                showMessage("Could not copy automatically. Please select the address and copy it manually.", "error");
+                setFeedback("Your browser blocked automatic copy. Use the “Select address” button, then press Ctrl+C or Cmd+C.", "error");
               }
             }
           );
         } else {
-          if (fallbackCopy(email)) {
-            showMessage("Email address copied to clipboard.", "success");
+          if (fallbackCopy(EMAIL)) {
+            setFeedback("Email address copied. Paste it into your email app's “To” field.", "success");
           } else {
-            showMessage("Could not copy automatically. Please select the address and copy it manually.", "error");
+            setFeedback("Your browser blocked automatic copy. Use the “Select address” button, then press Ctrl+C or Cmd+C.", "error");
           }
+        }
+      });
+
+      selectBtn.addEventListener("click", function () {
+        try {
+          var range = document.createRange();
+          range.selectNodeContents(emailLink);
+          var sel = window.getSelection();
+          sel.removeAllRanges();
+          sel.addRange(range);
+          setFeedback("Address selected. Press Ctrl+C (Windows/Linux) or Cmd+C (Mac) to copy.", "info");
+        } catch (e) {
+          setFeedback("Could not select automatically. Click the address and drag to select it, then copy.", "error");
         }
       });
     })();
