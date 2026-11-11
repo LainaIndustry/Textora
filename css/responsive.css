@@ -17,42 +17,87 @@
     align-items: center;
     justify-content: center;
   }
+
+  /* Mobile panel slides in below the header */
   .primary-nav {
     display: none;
     position: absolute;
-    top: 64px;
+    top: 71px; /* header height + 3px top border */
     left: 0;
     right: 0;
-    background: var(--color-surface);
-    border-bottom: 1px solid var(--color-border);
-    box-shadow: var(--shadow-md);
+    background: var(--nav-bg-end, #7c3aed);
+    background-image: linear-gradient(180deg, #6d28d9 0%, #4f46e5 100%);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 32px rgba(30, 27, 75, 0.28);
     padding: 12px 20px 20px;
-    max-height: calc(100vh - 64px);
+    max-height: calc(100vh - 71px);
     overflow-y: auto;
   }
   .primary-nav.is-open { display: block; }
+
   .primary-nav ul {
     flex-direction: column;
     align-items: stretch;
     gap: 2px;
   }
+
   .primary-nav a,
   .nav-dropdown > button {
     display: block;
     width: 100%;
     text-align: left;
-    padding: 11px 12px;
+    padding: 12px 14px;
+    color: var(--nav-text, #ffffff);
+    border-radius: 6px;
   }
+  .primary-nav a:hover,
+  .nav-dropdown > button:hover {
+    background: rgba(255, 255, 255, 0.14);
+    color: var(--nav-text, #ffffff);
+  }
+  .primary-nav a[aria-current="page"] {
+    background: rgba(255, 255, 255, 0.22);
+    box-shadow: inset 2px 0 0 var(--nav-accent-line, #a78bfa);
+  }
+
+  /* Dropdown becomes an inline expanded list on mobile */
   .nav-dropdown-menu {
     position: static;
+    transform: none;
+    min-width: 0;
     box-shadow: none;
     border: none;
-    padding: 0 0 0 12px;
-    min-width: 0;
+    padding: 4px 0 8px 12px;
+    background: transparent;
+    display: none;
   }
+  .nav-dropdown-menu::before { display: none; }
   .nav-dropdown.is-open .nav-dropdown-menu { display: block; }
-}
 
+  .nav-dropdown-menu ul {
+    grid-template-columns: 1fr;
+    gap: 1px;
+  }
+
+  .nav-dropdown-menu a {
+    color: var(--nav-text-muted, #e0e7ff);
+    padding: 9px 12px;
+    font-size: 0.9rem;
+  }
+  .nav-dropdown-menu a:hover,
+  .nav-dropdown-menu a:focus-visible {
+    background: rgba(255, 255, 255, 0.12);
+    color: #ffffff;
+  }
+
+  /* Disable hover-open on mobile */
+  .nav-dropdown:hover .nav-dropdown-menu {
+    display: none;
+  }
+  .nav-dropdown.is-open:hover .nav-dropdown-menu {
+    display: block;
+  }
+}
 @media (max-width: 640px) {
   body { font-size: 16px; }
   h1 { font-size: 1.75rem; }
