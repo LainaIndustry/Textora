@@ -797,53 +797,91 @@ textarea.text-input {
 }
 
 /* ==========================================================================
-   Footer
+   Footer — Ink & Quill (Deep Indigo)
    ========================================================================== */
 
 .site-footer {
-  background: var(--color-surface);
-  border-top: 1px solid var(--color-border);
-  padding: 48px 0 24px;
-  margin-top: 24px;
+  background: var(--footer-bg);
+  background-image:
+    radial-gradient(circle at 15% 0%, rgba(124, 58, 237, 0.14), transparent 45%),
+    radial-gradient(circle at 85% 100%, rgba(79, 70, 229, 0.12), transparent 45%);
+  border-top: 1px solid rgba(165, 180, 252, 0.15);
+  padding: 56px 0 24px;
+  margin-top: 48px;
   font-size: 0.92rem;
+  color: var(--footer-text);
+  position: relative;
 }
+.site-footer::before {
+  /* thin accent line at top for that premium touch */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg,
+    transparent 0%,
+    var(--footer-accent-line) 50%,
+    transparent 100%);
+  opacity: 0.7;
+}
+
 .footer-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 28px;
+  gap: 32px;
 }
+
 .footer-col h3 {
-  font-size: 0.82rem;
+  font-size: 0.78rem;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: var(--color-muted);
-  margin-bottom: 10px;
+  letter-spacing: 0.1em;
+  color: var(--footer-heading);
+  margin-bottom: 14px;
+  font-weight: 700;
 }
+
 .footer-col ul {
   list-style: none;
   padding: 0;
   margin: 0;
 }
-.footer-col li { margin-bottom: 6px; }
+.footer-col li { margin-bottom: 8px; }
+
 .footer-col a {
-  color: var(--color-text);
+  color: var(--footer-link);
   text-decoration: none;
   font-size: 0.9rem;
+  transition: color 0.15s ease, padding-left 0.15s ease;
+  display: inline-block;
 }
-.footer-col a:hover { color: var(--color-accent); text-decoration: underline; }
+.footer-col a:hover {
+  color: var(--footer-link-hover);
+  padding-left: 4px;
+}
 
+/* Footer bottom bar */
 .footer-bottom {
-  margin-top: 32px;
-  padding-top: 18px;
-  border-top: 1px solid var(--color-border);
+  margin-top: 40px;
+  padding-top: 22px;
+  border-top: 1px solid rgba(165, 180, 252, 0.15);
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   gap: 12px;
-  color: var(--color-muted);
+  color: var(--footer-muted);
   font-size: 0.85rem;
 }
-
+.footer-bottom a {
+  color: var(--footer-link);
+  text-decoration: none;
+  transition: color 0.15s ease;
+}
+.footer-bottom a:hover {
+  color: var(--footer-link-hover);
+  text-decoration: underline;
+}
 /* ==========================================================================
    Blog cards
    ========================================================================== */
