@@ -23,6 +23,29 @@
   --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue",
     Arial, "Noto Sans", sans-serif;
   --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+     /* Navigation theme — "Ink & Quill" */
+  --nav-bg-start: #4f46e5;
+  --nav-bg-end: #7c3aed;
+  --nav-accent-line: #a78bfa;
+  --nav-text: #ffffff;
+  --nav-text-muted: #e0e7ff;
+  --nav-hover-bg: rgba(255, 255, 255, 0.16);
+  --nav-active-bg: rgba(255, 255, 255, 0.26);
+  --nav-panel-bg: #ffffff;
+  --nav-panel-border: #e0e7ff;
+  --nav-panel-link: #1f2328;
+  --nav-panel-link-hover: #4f46e5;
+  --nav-panel-link-hover-bg: #eef2ff;
+
+  /* Footer theme — "Ink & Quill" */
+  --footer-bg: #1e1b4b;
+  --footer-bg-alt: #171237;
+  --footer-accent-line: #7c3aed;
+  --footer-heading: #a5b4fc;
+  --footer-text: #c7d2fe;
+  --footer-link: #e0e7ff;
+  --footer-link-hover: #ffffff;
+  --footer-muted: #818cf8;
 }
 
 *,
